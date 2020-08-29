@@ -1,5 +1,3 @@
-import {merchantId, merchantKey} from '../../ApiKeys'
-
 const urlBase = 'https://apisandbox.cieloecommerce.cielo.com.br'
 const urlQueryBase = 'https://apiquerysandbox.cieloecommerce.cielo.com.br'
 
@@ -12,8 +10,8 @@ const consumeApi = (parametro = '', method = 'GET', body) => {
         method,
         headers: { 
             'content-type': 'application/json', 
-            'MerchantId': merchantId, 
-            'MerchantKey': merchantKey,            
+            'MerchantId': process.env.MERCHANT_ID, 
+            'MerchantKey': process.env.MERCHANT_KEY,  
         },
         body
     })

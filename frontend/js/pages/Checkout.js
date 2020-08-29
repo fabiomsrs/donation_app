@@ -12,7 +12,6 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from '../app/checkout/components/titheForm';
 import PaymentForm from '../app/checkout/components/paymentForm';
 import Review from '../app/checkout/components/review';
-import { merchantOrderId } from '../ApiKeys'
 import CieloApiService from '../utils/services/CieloApiService'
 
 import { connect } from 'react-redux';
@@ -90,7 +89,7 @@ function Checkout(props) {
   const handleNext = () => {
     if(activeStep + 1 == steps.length){
       const body = {
-        MerchantOrderId: merchantOrderId,
+        MerchantOrderId: process.env.MERCHANT_ORDER_ID,
         Payment  : {
           Type:"CreditCard",
           Aumont: props.tithe.value,
