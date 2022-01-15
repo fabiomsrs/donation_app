@@ -37,7 +37,7 @@
     "jquery": "~3.5.0",
     "lodash": "~4.17.4",
     "markdown-to-jsx": "^6.11.4",
-    "marked": "~0.8.0",
+    "marked": "~4.0.10",
     "node-sass": "~4.13.1",
     "popper.js": "~1.16.0",
     "postcss": "~7.0.13",
